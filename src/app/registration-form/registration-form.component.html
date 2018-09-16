@@ -1,0 +1,45 @@
+<h2>
+  Registrierung
+</h2>
+
+<form>
+  <label for="name">Name: </label>
+  <input type="text" id="name">
+  <br><br>
+
+  <label>
+    <input type="radio" name="gender">
+    Männlich
+  </label>
+
+  <label>
+    <input type="radio" name="gender">
+    Weiblich
+  </label>
+  <br><br>
+
+  <label for="city">Stadt: </label>
+  <select id="city" required>
+    <option value="" selected></option>
+    <option value="N">Nürnberg</option>
+    <option value="GM">Gummersbach</option>
+    <option value="E">Essen</option>
+    <option value="HK">Hongkong</option>
+    <option value="Uni">Regenbogenland</option>
+  </select>
+  <br><br>
+
+  <input type="checkbox" id="newsletter">
+  <label for="newsletter">
+    Newsletter abonieren!
+  </label>
+  <br>
+
+  <label>
+    <input type="checkbox" id="agb" required>
+    AGB gelesen
+  </label>
+  <br><br>
+
+  <button type="submit">Registrieren</button>
+</form>
