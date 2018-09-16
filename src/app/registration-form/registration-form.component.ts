@@ -8,8 +8,9 @@ import { User } from '../user';
 })
 export class RegistrationFormComponent {
 
-  public user: User;
+  public user: User = new User();
 
-  constructor() { }
+  constructor() {
+  }
 
 }
