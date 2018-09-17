@@ -8,16 +8,17 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class RegistrationFormComponent implements OnInit {
 
-  public regForm: FormGroup;
-  constructor() { }
+  public regForm = new FormGroup({
+    name: new FormControl(''),
+    gender: new FormControl(''),
+    city: new FormControl(''),
+    newsletter: new FormControl('')
+  });
+
+  constructor() {
+  }
 
   ngOnInit() {
-    regForm = new FormGroup({
-      name: new FormControl(''),
-      gender: new FormControl(''),
-      city: new FormControl(''),
-      newsletter: new FormControl('')
-    });
   }
 
 }

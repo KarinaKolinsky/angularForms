@@ -2,24 +2,24 @@
   Registrierung
 </h2>
 
-<form>
+<form [formGroup]="regForm">
   <label for="name">Name: </label>
-  <input type="text" id="name">
+  <input type="text" id="name" formGroupName="name">
   <br><br>
 
   <label>
-    <input type="radio" name="gender">
+    <input type="radio" name="gender" value="m" formGroupName="gender">
     Männlich
   </label>
 
   <label>
-    <input type="radio" name="gender">
+    <input type="radio" name="gender" value="f" formGroupName="gender">
     Weiblich
   </label>
   <br><br>
 
   <label for="city">Stadt: </label>
-  <select id="city" required>
+  <select id="city" formGroupName="city" required>
     <option value="" selected></option>
     <option value="N">Nürnberg</option>
     <option value="GM">Gummersbach</option>
@@ -29,7 +29,7 @@
   </select>
   <br><br>
 
-  <input type="checkbox" id="newsletter">
+  <input type="checkbox" id="newsletter" formGroupName="newsletter">
   <label for="newsletter">
     Newsletter abonieren!
   </label>
