@@ -36,12 +36,13 @@
   <br>
 
   <label>
-    <input type="checkbox" id="agb" name="agb" [(ngModel)]="agb" required>
+  <div class="error-message" [hidden]="agb2.valid || agb2.pristine">Du musst erst die AGBs akzeptieren</div>
+    <input #agb2="ngModel" type="checkbox" id="agb" name="agb" [(ngModel)]="agb" required>
     AGB gelesen
   </label>
   <br><br>
 
-  <button type="submit" [disabled]="!f.valid">Registrieren</button>
+  <button type="submit" [disabled]="f.invalid">Registrieren</button>
 </form>
 
 For 2-way-binding: Testing Purpose <br>
