@@ -5,6 +5,7 @@
 <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
   <label for="name">Name: </label>
   <input type="text" id="name" formControlName="name">
+  <div *ngIf="regForm.get('name').errors?.minlength" class="error-message">Gib einen Namen mit mehr als 5 Zeichen ein</div>
   <br><br>
 
   <label>

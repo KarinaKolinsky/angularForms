@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class RegistrationFormComponent implements OnInit {
 
   public regForm = new FormGroup({
-    name: new FormControl(''),
+    name: new FormControl('', [Validators.required, Validators.minLength(5)]),
     gender: new FormControl(''),
     city: new FormControl('', Validators.required),
     newsletter: new FormControl(''),
