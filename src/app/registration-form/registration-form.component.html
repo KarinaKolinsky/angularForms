@@ -41,7 +41,7 @@
   </label>
   <br><br>
 
-  <button type="submit">Registrieren</button>
+  <button type="submit" [disabled]="!f.valid">Registrieren</button>
 </form>
 
 For 2-way-binding: Testing Purpose <br>
