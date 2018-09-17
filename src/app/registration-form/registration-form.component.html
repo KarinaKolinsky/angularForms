@@ -2,24 +2,24 @@
   Registrierung
 </h2>
 
-<form [formGroup]="regForm">
+<form [formGroup]="regForm" (ngSubmit)="onSubmit()">
   <label for="name">Name: </label>
-  <input type="text" id="name" formGroupName="name">
+  <input type="text" id="name" formControlName="name">
   <br><br>
 
   <label>
-    <input type="radio" name="gender" value="m" formGroupName="gender">
+    <input type="radio" name="gender" value="m" formControlName="gender">
     Männlich
   </label>
 
   <label>
-    <input type="radio" name="gender" value="f" formGroupName="gender">
+    <input type="radio" name="gender" value="f" formControlName="gender">
     Weiblich
   </label>
   <br><br>
 
   <label for="city">Stadt: </label>
-  <select id="city" formGroupName="city">
+  <select id="city" formControlName="city">
     <option value="" selected></option>
     <option value="N">Nürnberg</option>
     <option value="GM">Gummersbach</option>
@@ -29,14 +29,14 @@
   </select>
   <br><br>
 
-  <input type="checkbox" id="newsletter" formGroupName="newsletter">
+  <input type="checkbox" id="newsletter" formControlName="newsletter">
   <label for="newsletter">
     Newsletter abonieren!
   </label>
   <br>
 
   <label>
-    <input type="checkbox" id="agb" required>
+    <input type="checkbox" id="agb" formControlName="agb">
     AGB gelesen
   </label>
   <br><br>

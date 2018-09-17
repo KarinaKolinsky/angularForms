@@ -12,13 +12,18 @@ export class RegistrationFormComponent implements OnInit {
     name: new FormControl(''),
     gender: new FormControl(''),
     city: new FormControl('', Validators.required),
-    newsletter: new FormControl('')
+    newsletter: new FormControl(''),
+    agb: new FormControl(false, Validators.requiredTrue)
   });
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  onSubmit(event) {
+    console.log('Form Value Doku', this.regForm.value);
   }
 
 }
